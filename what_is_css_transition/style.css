@@ -1,0 +1,13 @@
+button {
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    background: darkblue;
+    border: none;
+    transition: background 3s;
+}
+
+button:hover {
+    background: green;
+    color: black;
+}

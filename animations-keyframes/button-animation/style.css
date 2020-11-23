@@ -1,0 +1,51 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 3px solid white;
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 120px;
+    background-color: #f44336;
+    transform: skew(-20deg);
+    animation: animate-button 3s linear infinite;
+    z-index: -1;
+    transition: all 0.5s
+}
+
+@keyframes animate-button {
+    from {
+        left: -20%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+a:hover:before {
+    width: 100%;
+    transform: skew(0);
+    animation: none;
+}
+
+
